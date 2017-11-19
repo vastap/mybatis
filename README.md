@@ -10,6 +10,7 @@
 - [Вставка данных и MyBatis](#MyBatisInsert)
 - [Массовое добавление данных и MyBatis](#MyBatisBatch)
 - [Работа через аннотации](#AnnotationBased)
+- [Ссылки и ресурсы](#LinksAndResources)
 
 ## <a name="GradleInit"></a> Gradle Init java-application
 Первый шаг - создание проекта.
@@ -580,3 +581,13 @@ public Message getMessageById(@PathVariable long messageId) {
 ```
 
 Если мы теперь выполним запрос http://127.0.0.1:8080/messages/get/1, то увидим, что всё отрабатывает так же корректно, как и через xml конфигурацию.
+
+## <a name="LinksAndResources"></a> Ссылки и ресурсы
+Книги:
+- K. Siva Prasad Reddy - "Java Persistence with Mybatis 3"
+- Srinivas Mudunuri - "Mybatis in Practice"
+
+Cсылки:
+- [MyBatis как более быстрая альтернатива Hibernate](https://habrahabr.ru/post/247885/)
+- [Quick Guide to MyBatis](http://www.baeldung.com/mybatis)
+- [Spring MyBatis integration example](http://www.codingpedia.org/ama/spring-mybatis-integration-example/)
