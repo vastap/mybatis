@@ -1,0 +1,1 @@
+insert into MESSAGE (TEXT) values ('First message');

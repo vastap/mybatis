@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="learn.mybatis.MessageMapper">
+    <!-- Получение по ID -->
+    <select id="findById" parameterType="long" resultType="learn.mybatis.Message">
+            SELECT id, text FROM message WHERE id = #{id} 
+    </select>
+
+    <!-- Добавление одиночной записи -->
+    <insert id="addMessage" parameterType="learn.mybatis.Message" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into MESSAGE (TEXT)
+        values (#{content})
+    </insert>
+
+    <!-- Массовое добавление в БД -->
+    <insert id="addMessages" keyProperty="id" useGeneratedKeys="true">
+        insert into message (text) values
+        <foreach collection="list" separator="," item="message">
+            (#{message.content})
+        </foreach>
+    </insert>
+
+</mapper>
